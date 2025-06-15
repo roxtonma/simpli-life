@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modular Economy Sim</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Economy Sim</h1>
+
+    <div id="busy-indicator" class="hidden">⏳ You're busy right now!</div>
+
+    <!-- Stats Panel -->
+    <div class="stats">
+      <p>❤️ Health: <span id="health">100</span></p>
+      <p>💰 Money: $<span id="money">0</span></p>
+      <p>⚡ Energy: <span id="energy">100</span></p>
+      <p>🍚 Hunger: <span id="hunger">100</span></p>
+      <p>😀 Satisfaction: <span id="satisfaction">50</span></p>
+    </div>
+
+    <!-- Job Buttons -->
+    <div>
+      <h2>Jobs</h2>
+      <div id="job-buttons" class="button-group"></div>
+    </div>
+
+    <!-- Actions -->
+    <div>
+      <h2>Self Care</h2>
+      <button id="rest-btn" class="hover-preview" data-tooltip="🛌 +30 Energy | 😀 +5 Satisfaction | ❤️ +10 Health">Rest</button>
+      <button id="eat-btn" class="hover-preview" data-tooltip="💸 -$20 | 🍚 +40 Hunger | 😀 +3 Satisfaction">Eat</button>
+    </div>
+
+    <!-- Progress Display -->
+    <div id="progress-container" class="hidden">
+      <div id="progress-bar"></div>
+    </div>
+    <p id="job-message"></p>
+
+    <!-- Notification Box -->
+    <div id="notif" class="notification"></div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip-box hidden"></div>
+
+    <!-- Add this before the container's closing div -->
+    <div class="actions">
+      <button id="reset-btn" class="danger-btn">Reset Game</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
