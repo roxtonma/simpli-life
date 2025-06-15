@@ -1,0 +1,158 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #222;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #4a90e2;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #357ac7;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Notification Box */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #323232;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+/* Tooltip */
+#tooltip {
+  position: absolute;
+  background: #333;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.tooltip-box.hidden,
+#busy-indicator.hidden {
+  display: none;
+}
+
+#busy-indicator {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Progress Bar */
+#progress-container {
+  margin: 15px 0;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  background-color: #4CAF50;
+  width: 0%;
+  transition: width 0.1s;
+}
+
+#job-message {
+  text-align: center;
+  height: 20px;
+  margin: 5px 0 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+h2 {
+  margin-top: 25px;
+  position: relative;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #4a90e2;
+  margin: 8px auto 15px;
+}
+
+.actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.danger-btn {
+  background-color: #e74c3c;
+}
+
+.danger-btn:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+/* Add this to ensure self-care buttons appear properly */
+#rest-btn, #eat-btn {
+  margin: 10px;
+  width: calc(50% - 20px);
+  display: inline-block;
+}
